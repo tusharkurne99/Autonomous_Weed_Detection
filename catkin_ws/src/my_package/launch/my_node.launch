@@ -1,0 +1,4 @@
+<launch>
+    <node name="talker_try" pkg="my_package" type="talker_try.py" />
+    <node name="serial_node" pkg="my_package" type="serial_node.py" output="screen" />
+</launch>

@@ -1,0 +1,11 @@
+<launch>
+	<node pkg= "weed_detection_with_tensorflow" name="weed_detection_final" type="weed_detection_final.py"  output="screen"> 
+    <remap from="image" to="/usb_cam_node/image_raw"/>
+	</node>
+
+  <node pkg="usb_cam" type="usb_cam_node" name="usb_cam_node" output="screen">
+    <param name="pixel_format" value="yuyv"/>
+    <param name="video_device" value="/dev/video0"/>
+  </node>
+
+</launch>
